@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Nombre app)"
+        android:textSize="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/textViewCalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24dp"
+        android:text="Seleccionar fecha"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitulo"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCalendario"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/textViewCalendario"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCalendario" />
+
+    <TextView
+        android:id="@+id/textViewDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Seleccionar destino"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/calendarView"
+        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    <EditText
+        android:id="@+id/editTextDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Destino"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDestino"
+        app:layout_constraintStart_toStartOf="@+id/textViewDestino"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDestino" />
+
+    <Button
+        android:id="@+id/buttonSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Siguiente"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDestino"
+        app:layout_constraintStart_toStartOf="@+id/editTextDestino"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDestino" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
